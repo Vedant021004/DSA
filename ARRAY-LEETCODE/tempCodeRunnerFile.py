@@ -1,13 +1,13 @@
-import math
+def findNumbers(nums):
 
-def find_for_threes(nums):
     count = 0
+
     for num in nums:
-        digit = int(math.log10(num)) + 1
-        if digit ==3 and num %2 == 0:
-            count +=1
+
+        if 10 <= num <= 99 or 1000 <= num <= 9999 or num == 100000:
+            count += 1
 
     return count
 
-obj = find_for_threes([1222,222,456,446,98,12])        
+obj = findNumbers([12,3,4,5678])
 print(obj)
