@@ -1,13 +1,12 @@
-def findNumbers(nums):
+class Solution(object):
+    def sortedSquares(self, nums):
+        max = []
+        for i in nums:
+            square = i*i
+            max.append(square)
+        max.sort()
 
-    count = 0
-
-    for num in nums:
-
-        if 10 <= num <= 99 or 1000 <= num <= 9999 or num == 100000:
-            count += 1
-
-    return count
-
-obj = findNumbers([12,3,4,5678])
-print(obj)
+        return max
+obj = Solution()
+answer = obj.sortedSquares([-4,-1,0,3,10])
+print(answer)
